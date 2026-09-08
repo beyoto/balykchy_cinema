@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './MoviesSchedulepage.scss';
+import './Moviesschedulepage.scss';
 import Header from '../../components/header/Header';
 
 // Замени на реальные данные с бэкенда
