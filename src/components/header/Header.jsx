@@ -14,7 +14,7 @@ export default function Header() {
 
     return (
         <>
-        <header className="site-header">
+            <header className="site-header">
                 <div className="site-header__logo" onClick={() => { nav('/') }}>
                     <h3>
                         ЫСЫК-КӨЛ КИНОТЕАТР
@@ -41,7 +41,14 @@ export default function Header() {
                     </button>
                     <nav className="site-drawer__nav">
                         {menuItems.map((item) => (
-                            <a key={item.label} href={item.href} onClick={() => setIsOpen(false)}>
+                            <a>
+                                key = {item.label}
+                                href = {item.href}
+                                onClick = {(e) => {
+                                    e.preventDefault();
+                                    nav(item.href);
+                                    setIsOpen(false);
+                                }}
                                 {item.label}
                             </a>
                         ))}
@@ -55,7 +62,7 @@ export default function Header() {
                         aria-hidden="true"
                     />
                 )}
-            </header>
+            </header >
         </>
     );
 }
