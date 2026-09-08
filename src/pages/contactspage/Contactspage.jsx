@@ -1,5 +1,5 @@
 import React from 'react';
-import './ContactsPage.scss';
+import './Contactspage.scss';
 import Header from '../../components/header/Header';
 
 // Замени на реальные данные кинотеатра
