@@ -41,14 +41,15 @@ export default function Header() {
                     </button>
                     <nav className="site-drawer__nav">
                         {menuItems.map((item) => (
-                            <a>
-                                key = {item.label}
-                                href = {item.href}
-                                onClick = {(e) => {
+                            <a
+                                key={item.label}
+                                href={item.href}
+                                onClick={(e) => {
                                     e.preventDefault();
                                     nav(item.href);
                                     setIsOpen(false);
                                 }}
+                            >
                                 {item.label}
                             </a>
                         ))}
